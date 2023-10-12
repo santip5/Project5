@@ -1,6 +1,7 @@
 import React from 'react';
 import { List, ListItem, Typography, Divider } from '@mui/material';
-import './userList.css'; // Import the CSS file
+import './userList.css';
+import {Link} from "react-router-dom"; // Import the CSS file
 
 const UserList = () => {
     const users = window.models.userListModel();
@@ -13,7 +14,7 @@ const UserList = () => {
             <List component="nav">
                 {users.map((user) => (
                     <React.Fragment key={user._id}>
-                        <ListItem component="a" href={`/users/${user._id}`} className="user-list-item">
+                        <ListItem component={Link} to={`/users/${user._id}`} className="user-list-item">
                             <div className="user-name">
                                 {user.first_name} {user.last_name}
                             </div>
