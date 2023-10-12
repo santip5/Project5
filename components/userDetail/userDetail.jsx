@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './userDetail.css';
-
+import TopBar from '../topBar/TopBar';
 class UserDetail extends React.Component {
   constructor(props) {
     super(props);
@@ -13,6 +13,7 @@ class UserDetail extends React.Component {
     
     return (
       <div className="user-detail">
+        <TopBar name={user.first_name+ ' ' + user.last_name} context="User Details" />
         <Typography variant="h4">{user.first_name} {user.last_name}</Typography>
         <Typography variant="body1">Location: {user.location}</Typography>
         <Typography variant="body1">Description: {user.description}</Typography>
