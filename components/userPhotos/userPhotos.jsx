@@ -7,6 +7,7 @@ import {
   Typography
 } from '@mui/material';
 import './userPhotos.css';
+import fetchModel from "../../lib/fetchModelData";
 
 
 /**
