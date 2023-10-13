@@ -83,10 +83,10 @@ class UserPhotos extends React.Component {
                                     <div key={comment._id}>
                                         <TextField id="date" label="Comment Date" variant="outlined" disabled fullWidth
                                                    margin="normal" value={comment.date_time} />
-                                        <TextField id="user" label="User" variant="outlined" disabled fullWidth
-                                                   margin="normal"
-                                                   value={comment.user.first_name + " " + comment.user.last_name}
-                                                   component="a" href={"#/users/" + comment.user._id}/>
+                                        <Button component="a" href={`#/users/${comment.user._id}`} variant="text">
+                                             {comment.user.first_name + " " + comment.user.last_name}
+                                        </Button>
+
                                         <TextField id="comment" label="Comment" variant="outlined" disabled fullWidth
                                                    margin="normal" multiline rows={4} value={comment.comment} />
                                     </div>
